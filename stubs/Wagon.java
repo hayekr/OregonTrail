@@ -25,5 +25,31 @@ public class Wagon {
 		return true;
 	}
 
+	public int getQuality() {
+		return quality;
+	}
 
+	public boolean setQuality() {
+		if (quality >= 100 || quality <= 0) {
+			return false;
+		}
+		this.quality = quality;
+		return true;
+	}
+
+	public void addPerson(Person person) {
+		people.add(person);
+	}
+
+	public boolean removePerson(int index) {
+		return false;
+	}
+
+	public int getCapability() {
+		return capability;
+	}
+
+	public boolean setCapability() {
+		return false;
+	}
 }
