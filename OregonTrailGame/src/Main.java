@@ -1,7 +1,7 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// Introduce user to game
+		// Introducing user to game
 
 		// Allow user to fill wagon
 			// Need to add WagonFiller class - read from csv file
