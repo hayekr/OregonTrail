@@ -24,7 +24,7 @@ public class Action {
     }
 
     /**
-     * @param string idicating to look
+     * @param string indicating to look
      * @return true if set
      */
     public boolean look(String look){
