@@ -18,6 +18,8 @@ public class TextProcessor {
 			case "INVENTORY": inventoryHandler(); break;
 			case "GO":
 			case "MOVE": movementHandler(); break;
+			case "drop": dropHandler(); break;
+			case "move": moveHandler(); break;
 		}
 	}
 
@@ -41,6 +43,14 @@ public class TextProcessor {
 			case "LEFT":
 			case "WEST": System.out.println("west"); break;
 		}
+	}
+
+	public void dropHandler() {
+		System.out.println("dropHandler");
+	}
+
+	public void moveHandler() {
+		System.out.println("moveHandler");
 	}
 
 	public void error() {
