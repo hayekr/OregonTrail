@@ -5,15 +5,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CSVReader {
-	boolean fileHasBeenSet = false;
-	File file;
-	Scanner readFile;
+	private boolean fileHasBeenSet = false;
+	private File file;
+	private Scanner readFile;
 
-	String fileReadError = "File read error";
-	String outOfBoundsError = "Out of bounds error";
+	private String fileReadError = "File read error";
+	private String outOfBoundsError = "Out of bounds error";
 
 	// Rows are outer ArrayList, Columns are inner ArrayList
-	ArrayList<ArrayList<String>> csvContents = new ArrayList<ArrayList<String>>();
+	private ArrayList<ArrayList<String>> csvContents = new ArrayList<ArrayList<String>>();
 
 	/**
 	 * Constructor for CSVReader
