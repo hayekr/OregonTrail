@@ -17,7 +17,7 @@ public class Main {
 		// Force to go west only? It is just MVP, not real program. Ex map is 7 tiles long, start, mix of river/forest/plains, end?
 		// Will need to write MapGenerator class
 		// If not just MVP, could allow movement in all 4 directions
-		GamePlay game = new GamePlay();
+		//GamePlay game = new GamePlay(wagon);
 	}
 
 	public static void introduction() {

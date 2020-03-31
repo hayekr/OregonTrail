@@ -10,7 +10,7 @@ public class GamePlay {
 	/**
 	 * Constructor for gameplay
 	 */
-	GamePlay(Wagon wagon) {
+	GamePlay() {
 		// import map
 
 
@@ -18,7 +18,7 @@ public class GamePlay {
 		while (true) {
 			// Describe Environment
 			// replace map with whatever function in class
-			System.out.println(map.get(westProgress).getDescription());
+			//System.out.println(map.get(westProgress).getDescription());
 
 			// Allow user to make a choice
 
@@ -29,6 +29,7 @@ public class GamePlay {
 			// if plains stuff
 
 			// if forest stuff
+			break;
 		}
 	}
 
