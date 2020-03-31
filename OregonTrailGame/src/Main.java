@@ -22,6 +22,11 @@ public class Main {
 
 	public static void introduction() {
 		// info here
+		System.out.println("Welcome to the Oregon Trail Simulation!");
+		System.out.println("In this simulation you will choose what items to pack in your wagon ");
+		System.out.println("and make your journey west on the Oregon Trail. Throughout the simulation,");
+		System.out.println("you will encounter different habitats, animals, and obstacles, so make sure");
+		System.out.println("that you are well prepared! You will now begin to load your wagon. Good luck!");
 	}
 
 	public static void fillWagon() {
