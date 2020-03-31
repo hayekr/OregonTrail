@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Wagon {
-	int quality;
-	int capability;
+	protected int quality;
+	protected int capability;
 	ArrayList<Item> contents = new ArrayList<Item>();
 	ArrayList<Person> people = new ArrayList<Person>();
 
@@ -56,7 +56,7 @@ public class Wagon {
 	 * @return true if set, false otherwise
 	 */
 	public boolean setQuality(int quality) {
-		if (quality >= 100 || quality <= 0) {
+		if (quality >= 1500 || quality <= 0) {
 			return false;
 		}
 		this.quality = quality;
@@ -101,5 +101,25 @@ public class Wagon {
 		}
 		this.capability = capability;
 		return true;
+	}
+
+	/**getTotalWeight
+	 * Get the total weight of the items in the wagon combined
+	 * @return the total weight of the items in the wagon combined
+	 */
+	public double getTotalWeight(){
+		double total = 0;
+		for (int i = 0; i < contents.size(); i++){
+			total += contents.get(i).getWeight();
+		}
+		return total;
+	}
+
+	/**isOverweight
+	 * check to see if the wagon can hold the load
+	 * @return true if the wagon is too heavy, false otherwise
+	 */
+	public boolean isOverweight(){
+		return quality > getTotalWeight();
 	}
 }

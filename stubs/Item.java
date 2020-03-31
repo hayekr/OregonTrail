@@ -1,7 +1,7 @@
 public class Item {
-	String name;
-	double weightPerUnit;
-	int quantity;
+	protected String name;
+	protected double weightPerUnit;
+	protected int quantity;
 
 	/**
 	 * Constructor for Item
@@ -22,15 +22,15 @@ public class Item {
 		this("",0,0);
 	}
 
-	/**
+	/**getName
 	 * Get the name of the item
 	 * @return the name of the item
 	 */
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
-	/**
+	/**setName
 	 * Set the name of the item
 	 * @param name the desired name
 	 */
@@ -38,45 +38,53 @@ public class Item {
 		this.name = name;
 	}
 
-	/**
-	 * Get the weight of the items altogether
+	/**getWeight
+	 * Get the weight of the items of one kind altogether
 	 * @return the weight of the items
 	 */
-	public int getWeight() {
-		return 5;
+	public double getWeight() {
+		return this.quantity * this.weightPerUnit;
 	}
 
-	/**
+	/**getWeightPerUnit
 	 * Get the weight per unit of the item
 	 * @return the weight per unit of the item
 	 */
 	public double getWeightPerUnit() {
-		return weightPerUnit;
+		return this.weightPerUnit;
 	}
 
-	/**
+	/**setWeightPerUnit
 	 * Set the weight of the item per unit
 	 * @param weight the desired weight per unit of the item
 	 * @return true if changed, false otherwise
 	 */
 	public boolean setWeightPerUnit(double weight) {
-		return false;
+		if (weight >= 100 || weight <= 0) {
+			return false;
+		}
+		this.weightPerUnit = weight;
+		return true;
 	}
 
-	/**
+	/**getQuantity
 	 * Get the quantity of the item
 	 * @return the number of items of this type
 	 */
 	public int getQuantity() {
-		return quantity;
+		return this.quantity;
 	}
 
-	/**
+	/**setQuantity
 	 * Set the number of items
 	 * @param quantity the number of items
 	 * @return true if set, false otherwise
 	 */
 	public boolean setQuantity(int quantity) {
-		return false;
+		if (quantity >= 100 || quantity <= 0) {
+			return false;
+		}
+		this.weightPerUnit = quantity;
+		return true;
 	}
 }
