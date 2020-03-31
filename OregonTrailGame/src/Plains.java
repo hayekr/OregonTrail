@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
-public class Forest extends Environment {
+public class Plains extends Environment {
 	ArrayList<Animal> animals = new ArrayList<Animal>();
 
 	/**
-	 * Constructor for forest
+	 * Constructor for plains
 	 * @param description the description of the environment
 	 */
-	Forest(String description) {
+	Plains(String description) {
 		super(description);
 	}
 
 	/**
 	 * Default constructor
 	 */
-	Forest() {
+	Plains() {
 		super("");
 	}
 
@@ -40,7 +40,7 @@ public class Forest extends Environment {
 	 * @param animal the animal to be added
 	 */
 	public void addAnimal(Animal animal) {
-
+		animals.add(animal);
 	}
 
 	/**
@@ -49,6 +49,8 @@ public class Forest extends Environment {
 	 * @return true if the animal was removed, false otherwise
 	 */
 	public boolean removeAnimal(int index) {
-		return false;
+		if (index < animals.size()) return false;
+		animals.remove(index);
+		return true;
 	}
 }

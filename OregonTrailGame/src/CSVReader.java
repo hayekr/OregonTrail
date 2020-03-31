@@ -12,6 +12,8 @@ public class CSVReader {
 	private String fileReadError = "File read error";
 	private String outOfBoundsError = "Out of bounds error";
 
+	CSVReader csv = new CSVReader();
+
 	// Rows are outer ArrayList, Columns are inner ArrayList
 	private ArrayList<ArrayList<String>> csvContents = new ArrayList<ArrayList<String>>();
 

@@ -32,10 +32,13 @@ public class Food extends Item {
 
 	/**
 	 * Set the time until the food item expires
+	 * @param expirationTime the time until expiration
 	 * @return true if set, false otherwise
 	 */
-	public boolean setExpirationTime() {
-		return false;
+	public boolean setExpirationTime(int expirationTime) {
+		if (expirationTime < 0) return false;
+		this.expirationTime = expirationTime;
+		return true;
 	}
 
 	/**
@@ -52,6 +55,6 @@ public class Food extends Item {
 	 * @param status true of the food is expired, false otherwise
 	 */
 	public void setExpiredStatus(boolean status) {
-
+		this.isExpired = status;
 	}
 }
