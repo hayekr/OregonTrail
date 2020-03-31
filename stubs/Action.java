@@ -3,12 +3,13 @@ public class Action {
 
     /**
      * Default Constructor for Action
+     * Change here
      *
      */
     Action(){ }
 
     /**
-     * @param string indicating to move
+     * @param String indicating to move
      * @return true if set
      */
     public boolean move(String move){
@@ -16,7 +17,7 @@ public class Action {
     }
 
     /**
-     * @param string indicating to buy
+     * @param String indicating to buy
      * @return true if set
      */
     public boolean buy(String buy){
@@ -24,7 +25,7 @@ public class Action {
     }
 
     /**
-     * @param string indicating to look
+     * @param String idicating to look
      * @return true if set
      */
     public boolean look(String look){
@@ -32,7 +33,7 @@ public class Action {
     }
 
     /**
-     * @param string indicating to stop
+     * @param String indicating to stop
      * @return true if set
      */
     public boolean stop(String stop){
@@ -40,7 +41,7 @@ public class Action {
     }
 
     /**
-     * @param string indicating to check map
+     * @param String indicating to check map
      * @return true if set
      */
     public boolean checkMap(String checkMap){
