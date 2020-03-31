@@ -109,8 +109,8 @@ public class Wagon {
 	 */
 	public double getTotalWeight(){
 		double total = 0;
-		for (int i = 0; i < contents.size(); i++){
-			total += contents.get(i).getWeight();
+		for (Item content : contents) {
+			total += content.getWeight();
 		}
 		return total;
 	}
