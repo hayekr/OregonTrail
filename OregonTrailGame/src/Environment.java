@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class Environment {
 	String type;
 	String description;
+	ArrayList<Animal> animals = new ArrayList<Animal>();
 
 	/**
 	 * Constructor for Environment
