@@ -34,7 +34,11 @@ public class River extends Environment {
 	 * @return true if the speed was changed, false otherwise
 	 */
 	public boolean setSpeed(int speed) {
-		return false;
+		if (speed < 0) {
+			return false;
+		}
+		this.speed = speed;
+		return true;
 	}
 
 	/**
@@ -51,6 +55,10 @@ public class River extends Environment {
 	 * @return true if the depth was changed, false otherwise
 	 */
 	public boolean setDepth(int depth) {
-		return false;
+		if (depth < 0) {
+			return false;
+		}
+		this.depth = depth;
+		return true;
 	}
 }

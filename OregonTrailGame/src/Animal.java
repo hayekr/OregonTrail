@@ -32,7 +32,7 @@ public class Animal {
 	 * @param type the type of animal
 	 */
 	public void setType(String type) {
-
+		this.type = type;
 	}
 
 	/**
@@ -48,6 +48,8 @@ public class Animal {
 	 * @return true if it was set, false otherwise
 	 */
 	public boolean setFoodValue(int value) {
-		return false;
+		if (value < 0) return false;
+		this.foodValue = value;
+		return true;
 	}
 }

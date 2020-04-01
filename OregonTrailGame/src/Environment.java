@@ -7,7 +7,7 @@ public class Environment {
 	 * @param description the description of the environment
 	 */
 	Environment(String description) {
-		this.description = description;
+		setDescription(description);
 	}
 
 	/**
@@ -28,7 +28,7 @@ public class Environment {
 	/**
 	 * Used to set the description of an environment
 	 */
-	public void setDescription() {
-
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }
