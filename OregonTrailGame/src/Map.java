@@ -1,16 +1,22 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Map {
-	ArrayList<Environment> environmentList = new ArrayList<Environment>();
+	private static final String COMMA_DELIMITER = ",";
+	ArrayList<Environment<String>> environmentList = new ArrayList<>();
 
 	/**
 	 * Used to load the map from a file
 	 * @param csvfile the file storing the map
 	 * @return true if successfully loaded, false otherwise
 	 */
-	public boolean generateEnvironment(File csvfile) {
-		return false;
+	public void generateEnvironment(File csvfile) {
+
 	}
 
 	/**
@@ -18,7 +24,6 @@ public class Map {
 	 * @param environment the environment to be added
 	 */
 	public void addEnvironment(Environment environment) {
-
 	}
 
 	/**
@@ -37,5 +42,9 @@ public class Map {
 	 */
 	public boolean changeEnvironment(int index) {
 		return false;
+	}
+
+	public Environment getEnvironment(int index) {
+		return environmentList.get(index);
 	}
 }
