@@ -16,6 +16,9 @@ public class Map {
 	 * @return true if successfully loaded, false otherwise
 	 */
 	public void generateEnvironment(File csvfile) {
+		ArrayList<Environment> envlist = new ArrayList<Environment>();
+		envlist.add(new Forest("desc"));
+		((Forest) envlist.get(0)).addAnimal(new Animal("dog",5));
 
 	}
 

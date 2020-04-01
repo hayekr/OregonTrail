@@ -18,6 +18,9 @@ public class Main {
 		// Will need to write MapGenerator class
 		// If not just MVP, could allow movement in all 4 directions
 		//GamePlay game = new GamePlay(wagon);
+
+		Forest forest = new Forest("test");
+		System.out.println(forest.getDescription());
 	}
 
 	public static void introduction() {

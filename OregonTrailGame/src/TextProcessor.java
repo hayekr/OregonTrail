@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 
 // Might want to make static? Since it will always be used, no point in constant instantiation of it
@@ -7,31 +8,39 @@ public class TextProcessor {
 
 	String[] userInputArray;
 
-	public void processText() {
+	/**
+	 * Default Constructor
+	 */
+	TextProcessor() {
+
+	}
+
+	public String processText() {
 		String userInput = sc.nextLine();
 		// Modify user input to be easily parsed
 		userInputArray = userInput.toUpperCase().trim().split(" ");
 
 		// Initial Verb Parsing
 		switch(userInputArray[0]) {
-			case "LOOK": lookHandler(); break;
-			case "INVENTORY": inventoryHandler(); break;
+			case "LOOK": return lookHandler();
+			case "INVENTORY": return inventoryHandler();
 			case "GO":
-			case "MOVE": movementHandler(); break;
-			case "drop": dropHandler(); break;
-			case "move": moveHandler(); break;
+			case "MOVE": return movementHandler();
 		}
+	return "x";
 	}
 
-	public void lookHandler() {
+	public String lookHandler() {
 		System.out.println("lookHandler");
+		return "x";
 	}
 
-	public void inventoryHandler() {
+	public String inventoryHandler() {
 		System.out.println("inventoryHandler");
+		return "x";
 	}
 
-	public void movementHandler() {
+	public String movementHandler() {
 		System.out.println("movementHandler");
 		switch(userInputArray[1]) {
 			case "UP":
@@ -43,17 +52,17 @@ public class TextProcessor {
 			case "LEFT":
 			case "WEST": System.out.println("west"); break;
 		}
+		return "x";
 	}
 
-	public void dropHandler() {
-		System.out.println("dropHandler");
-	}
-
-	public void moveHandler() {
+	public String moveHandler() {
 		System.out.println("moveHandler");
+		return "x";
 	}
 
-	public void error() {
-		System.out.println("error");
+	public String error() {
+		System.out.println("Sorry, I didn't understand that");
+		//return processText();
+		return "x";
 	}
 }
