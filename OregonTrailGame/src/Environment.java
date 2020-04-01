@@ -1,19 +1,20 @@
 public class Environment {
+	String type;
 	String description;
 
 	/**
 	 * Constructor for Environment
 	 * @param description the description of the environment
 	 */
-	Environment(String description) {
+	Environment(String type, String description) {
 		setDescription(description);
 	}
-
 	/**
 	 * Default constructor
 	 */
 	Environment() {
-		this("");
+		this.description = "";
+		this.type = "";
 	}
 
 	/**

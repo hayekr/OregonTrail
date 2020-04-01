@@ -1,4 +1,4 @@
-public class Animal {
+public class Animal extends Environment {
 	String type;
 	int foodValue;
 
