@@ -8,8 +8,8 @@ import java.util.List;
 
 public class Map {
 	private static final String COMMA_DELIMITER = ",";
-	ArrayList<Environment<String>> environmentList = new ArrayList<>();
-
+	ArrayList<Environment> environmentList = new ArrayList<>();
+	ArrayList<Animal> animalList = new ArrayList<>();
 	/**
 	 * Used to load the map from a file
 	 * @param csvfile the file storing the map

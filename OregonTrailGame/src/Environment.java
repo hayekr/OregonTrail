@@ -1,7 +1,6 @@
 public class Environment {
 	String description;
 
-
 	/**
 	 * Constructor for Environment
 	 * @param description the description of the environment
