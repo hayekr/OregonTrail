@@ -122,4 +122,16 @@ public class Wagon {
 	public boolean isOverweight(){
 		return quality > getTotalWeight();
 	}
+
+	/**
+	 * Get the contents of a wagon
+	 * @return a string containing the items in the wagon
+	 */
+	public String getInventory() {
+		String temp = "";
+		for (int i = 0; i < contents.size(); i++) {
+			temp += contents.get(i).getName() + "";
+		}
+		return temp;
+	}
 }
