@@ -45,6 +45,7 @@ public class Main {
 	}
 
 	public static void fillWagon(Wagon wagon) {
+		// system out that prompts user to type "go" or something to start filing the wagon, instead of jumping right into it 
 		ArrayList<ArrayList<String>> item_weight = new ArrayList<>();
 		// give user list fo things to put in wagon
 		// implement the code to add items to wagon
