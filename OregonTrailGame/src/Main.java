@@ -38,7 +38,7 @@ public class Main {
 	}
 
 	public static void fillWagon(Wagon wagon) {
-		Hashtable<String, String> item_weight = new Hashtable<String, String>();
+		ArrayList<ArrayList<String>> item_weight = new ArrayList<>();
 		// give user list fo things to put in wagon
 		// implement the code to add items to wagon
 		// keep a running total of the wagon's weight, show a certain message if they go over the weight limit
