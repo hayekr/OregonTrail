@@ -1,21 +1,37 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Map {
 	private static final String COMMA_DELIMITER = ",";
 	ArrayList<Environment> environmentList = new ArrayList<>();
 	ArrayList<Animal> animalList = new ArrayList<>();
+
 	/**
 	 * Used to load the map from a file
+	 *
 	 * @param csvfile the file storing the map
 	 * @return true if successfully loaded, false otherwise
 	 */
-	public void generateEnvironment(File csvfile) {
+	public ArrayList<ArrayList<String>> parseDataFromCsvFile(File csvfile) {
+		ArrayList<ArrayList<String>> dataFromFile = new ArrayList<ArrayList<String>>();
+		try {
+			Scanner scanner = new Scanner(new FileReader(csvfile));
+			scanner.useDelimiter(",");
+
+			while (scanner.hasNext()) {
+				String dataInRow = scanner.nextLine();
+				String[] dataInRowArray = dataInRow.split(",");
+				ArrayList<String> rowDataFromFile = new ArrayList<String>(Arrays.asList(dataInRowArray));
+				dataFromFile.add(rowDataFromFile);
+			}
+			scanner.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return dataFromFile;
 	}
 
 	/**
@@ -31,17 +47,9 @@ public class Map {
 	 * @return true if the environment was removed, false otherwise
 	 */
 	public boolean removeEnvironment(int index) {
-		return false;
+		return true;
 	}
 
-	/**
-	 * Used to change an environment
-	 * @param index the environment to be changed
-	 * @return true if the environment was changed, false otherwise
-	 */
-	public boolean changeEnvironment(int index) {
-		return false;
-	}
 
 	public Environment getEnvironment(int index) {
 		return environmentList.get(index);

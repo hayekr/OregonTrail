@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -19,8 +20,12 @@ public class Main {
 		// If not just MVP, could allow movement in all 4 directions
 		//GamePlay game = new GamePlay(wagon);
 
-		Forest forest = new Forest("test");
-		System.out.println(forest.getDescription());
+		File csvFile = new File("/Users/roberthayek/Desktop/OregonTrail/OregonTrailGame/src/Map_Oregon_Trail.csv");
+		Map newMap = new Map();
+		ArrayList<ArrayList<String>> csvFileData = newMap.parseDataFromCsvFile(csvFile);
+		for (ArrayList<String> rowInFile : csvFileData) {
+			System.out.println(rowInFile);
+		}
 	}
 
 	public static void introduction() {
