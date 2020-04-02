@@ -66,7 +66,7 @@ public class Main {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		int count = 0;
+		int count = -1;
 		for (ArrayList<String> rowInFile : item_weight) {
 			count++;
 			System.out.println("Item #" + count + ": " + rowInFile);
@@ -77,7 +77,7 @@ public class Main {
 		ArrayList<String> itemName = item_weight.get(Integer.parseInt(number));
 		Item newItem = new Item(String.join(",", itemName), 100, 1);
 		wagon.addItem(newItem);
-
+		System.out.println(wagon.getInventory());
 	}
 }
 
