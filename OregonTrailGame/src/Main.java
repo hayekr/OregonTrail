@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class Main {
 
@@ -37,7 +38,7 @@ public class Main {
 	}
 
 	public static void fillWagon(Wagon wagon) {
-//test
+		Hashtable<String, String> item_weight = new Hashtable<String, String>();
 	}
 
 }
