@@ -37,7 +37,10 @@ public class Main {
 	}
 
 	public static void fillWagon(Wagon wagon) {
-
+		// give user list fo things to put in wagon
+		// implement the code to add items to wagon
+		// keep a running total of the wagon's weight, show a certain message if they go over the weight limit
+		// add a way to let the user continue the program after they are done filling the wagon
 	}
 
 }
