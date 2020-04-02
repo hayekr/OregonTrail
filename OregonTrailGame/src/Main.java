@@ -65,8 +65,10 @@ public class Main {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		int count = 0;
 		for (ArrayList<String> rowInFile : item_weight) {
-			System.out.println(rowInFile);
+			count++;
+			System.out.println("Item #" + count + ": " + rowInFile);
 		}
 
 	}
