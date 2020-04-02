@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class Main {
 
@@ -37,6 +38,8 @@ public class Main {
 	}
 
 	public static void fillWagon(Wagon wagon) {
+		System.out.println("Here are the items you can add to your wagon, please pick what you want: ");
+		Hashtable<String, String> items_weight = new Hashtable<String, String>();
 
 	}
 
