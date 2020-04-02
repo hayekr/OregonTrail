@@ -31,7 +31,6 @@ public class Main {
 		System.out.println("\n You are in" + csvFileData.get(0).get(0));
 
 		new GamePlay(newMap, wagon);
-		fillWagon(wagon);
 
 	}
 
