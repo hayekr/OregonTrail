@@ -56,7 +56,11 @@ public class Map {
 	}
 
 
-	public Environment getEnvironment(int index) {
-		return environmentList.get(index);
+	public void getEnvironment(int index) {
+		try {
+			dataFromFile.get(index);
+		} catch (IndexOutOfBoundsException e) {
+			e.printStackTrace();
+		}
 	}
 }
