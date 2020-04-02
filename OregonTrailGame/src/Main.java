@@ -20,7 +20,7 @@ public class Main {
 		// If not just MVP, could allow movement in all 4 directions
 		//GamePlay game = new GamePlay(wagon);
 
-		File csvFile = new File("/Users/roberthayek/Desktop/OregonTrail/OregonTrailGame/src/Map_Oregon_Trail.csv");
+		File csvFile = new File("OregonTrailGame/src/Map_Oregon_Trail.csv");
 		Map newMap = new Map();
 		ArrayList<ArrayList<String>> csvFileData = newMap.parseDataFromCsvFile(csvFile);
 		for (ArrayList<String> rowInFile : csvFileData) {
