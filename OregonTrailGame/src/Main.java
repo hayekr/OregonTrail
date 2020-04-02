@@ -1,7 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Hashtable;
+import java.util.Scanner;
 
 public class Main {
 
@@ -20,12 +23,16 @@ public class Main {
 		// If not just MVP, could allow movement in all 4 directions
 		//GamePlay game = new GamePlay(wagon);
 
+		//Items Oregon Trail.csv
+		//
 		File csvFile = new File("OregonTrailGame/src/Map_Oregon_Trail.csv");
 		Map newMap = new Map();
 		ArrayList<ArrayList<String>> csvFileData = newMap.parseDataFromCsvFile(csvFile);
 		System.out.println("\n You are in" + csvFileData.get(0).get(0));
 
 		new GamePlay(newMap, wagon);
+		fillWagon(wagon);
+
 	}
 
 	public static void introduction() {
@@ -43,6 +50,25 @@ public class Main {
 		// implement the code to add items to wagon
 		// keep a running total of the wagon's weight, show a certain message if they go over the weight limit
 		// add a way to let the user continue the program after they are done filling the wagon
+		File csvItemFile = new File("OregonTrailGame/src/Items Oregon Trail.csv");
+		try {
+			Scanner scanner = new Scanner(new FileReader(csvItemFile));
+			scanner.useDelimiter(",");
+
+			while (scanner.hasNext()) {
+				String dataInRow = scanner.nextLine();
+				String[] dataInRowArray = dataInRow.split(",");
+				ArrayList<String> rowDataFromFile = new ArrayList<String>(Arrays.asList(dataInRowArray));
+				item_weight.add(rowDataFromFile);
+			}
+			scanner.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		for (ArrayList<String> rowInFile : item_weight) {
+			System.out.println(rowInFile);
+		}
+
 	}
-	}
+}
 
