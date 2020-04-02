@@ -34,7 +34,7 @@ public class Map {
 
 	public Environment createEnvironment(int index) {
 		ArrayList<String> name = dataFromFile.get(index);
-		Environment newEnvironment = new Environment(name.get(0));
+		Environment newEnvironment = new Environment(name.get(index), name.get(index + 1));
 
 		return newEnvironment;
 	}
