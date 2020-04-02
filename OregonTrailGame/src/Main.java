@@ -23,9 +23,7 @@ public class Main {
 		File csvFile = new File("OregonTrailGame/src/Map_Oregon_Trail.csv");
 		Map newMap = new Map();
 		ArrayList<ArrayList<String>> csvFileData = newMap.parseDataFromCsvFile(csvFile);
-		for (ArrayList<String> rowInFile : csvFileData) {
-			System.out.println(rowInFile);
-		}
+		System.out.println("\n You are in" + csvFileData.get(0).get(0));
 	}
 
 	public static void introduction() {

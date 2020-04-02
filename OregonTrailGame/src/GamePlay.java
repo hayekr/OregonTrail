@@ -17,7 +17,7 @@ public class GamePlay {
 
 		while (true) {
 			// Print out description of current environment
-			System.out.println(map.getEnvironment(westProgress).getDescription());
+			System.out.println(map.createEnvironment(westProgress));
 
 			if (westProgress > 10) {
 				break;

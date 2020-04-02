@@ -32,6 +32,13 @@ public class Map {
 		return dataFromFile;
 	}
 
+	public Environment createEnvironment(int index) {
+		ArrayList<String> name = dataFromFile.get(index);
+		Environment newEnvironment = new Environment(name.get(0));
+
+		return newEnvironment;
+	}
+
 	/**
 	 * Used to add an additional environments to the map
 	 *
