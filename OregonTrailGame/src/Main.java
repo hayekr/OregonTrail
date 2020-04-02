@@ -4,15 +4,14 @@ import java.util.ArrayList;
 
 public class Main {
 
-	//Wagon wagon = new Wagon;
-
 	public static void main(String[] args) throws FileNotFoundException {
 		// Introducing user to game
 		introduction();
 
 		// Allow user to fill wagon
 		// Need to add WagonFiller class - read from csv file
-		fillWagon();
+		Wagon wagon = new Wagon();
+		fillWagon(wagon);
 
 		// Allow user to go on travels
 		// Force to go west only? It is just MVP, not real program. Ex map is 7 tiles long, start, mix of river/forest/plains, end?
@@ -24,6 +23,8 @@ public class Main {
 		Map newMap = new Map();
 		ArrayList<ArrayList<String>> csvFileData = newMap.parseDataFromCsvFile(csvFile);
 		System.out.println("\n You are in" + csvFileData.get(0).get(0));
+
+		new GamePlay(newMap, wagon);
 	}
 
 	public static void introduction() {
@@ -35,7 +36,7 @@ public class Main {
 		System.out.println("that you are well prepared! You will now begin to load your wagon. Good luck!");
 	}
 
-	public static void fillWagon() {
+	public static void fillWagon(Wagon wagon) {
 
 	}
 

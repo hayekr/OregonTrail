@@ -27,42 +27,34 @@ public class TextProcessor {
 			case "GO":
 			case "MOVE": return movementHandler();
 		}
-	return "x";
+		return "";
 	}
 
 	public String lookHandler() {
-		System.out.println("lookHandler");
-		return "x";
+		return "lookaround";
 	}
 
 	public String inventoryHandler() {
-		System.out.println("inventoryHandler");
-		return "x";
+		return "inventory";
 	}
 
 	public String movementHandler() {
-		System.out.println("movementHandler");
 		switch(userInputArray[1]) {
 			case "UP":
-			case "NORTH": System.out.println("north"); break;
+			case "NORTH": break;
 			case "DOWN":
-			case "SOUTH": System.out.println("south"); break;
+			case "SOUTH": break;
 			case "RIGHT":
-			case "EAST": System.out.println("east"); break;
+			case "EAST": break;
 			case "LEFT":
-			case "WEST": System.out.println("west"); break;
+			case "WEST": return "goWest";
 		}
-		return "x";
-	}
-
-	public String moveHandler() {
-		System.out.println("moveHandler");
-		return "x";
+		return "";
 	}
 
 	public String error() {
 		System.out.println("Sorry, I didn't understand that");
 		//return processText();
-		return "x";
+		return "error";
 	}
 }

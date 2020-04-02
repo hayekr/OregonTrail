@@ -6,6 +6,7 @@ public class GamePlay {
 	private int westProgress = 0;
 	TextProcessor tp = new TextProcessor();
 	Wagon wagon;
+	Map map;
 
 	/**
 	 * Constructor for gameplay
@@ -13,15 +14,17 @@ public class GamePlay {
 	GamePlay(Map map, Wagon wagon) {
 
 		this.wagon = wagon;
+		this.map = map;
 
 
 		while (true) {
 			// Print out description of current environment
-			System.out.println(map.createEnvironment(westProgress));
+			System.out.println(map.createEnvironment(westProgress).getDescription());
 
 			if (westProgress > 10) {
 				break;
 			}
+
 
 			userInput();
 
@@ -42,7 +45,9 @@ public class GamePlay {
 	private void userInput() {
 		switch(tp.processText()) {
 			case "goWest": westProgress++; break;
-			case "inventory": System.out.println(wagon.getInventory());
+			case "inventory": System.out.println(wagon.getInventory()); break;
+			case "lookaround": System.out.println(map.createEnvironment(westProgress).getDescription()); break;
+			case "error": break;
 			default: System.out.println("You can't do that");
 		}
 	}
