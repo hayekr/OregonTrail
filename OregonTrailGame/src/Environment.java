@@ -13,11 +13,11 @@ public class Environment {
 	 * @param description the description of the environment
 	 */
 	Environment(String type, String description) {
-		setDescription(description);
+		this(type, description, 0, 0);
 	}
 
 	Environment(String type) {
-		this.type = type;
+		this(type, "", 0, 0);
 	}
 
 	/**
