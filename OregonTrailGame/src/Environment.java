@@ -16,6 +16,10 @@ public class Environment {
 		setDescription(description);
 	}
 
+	Environment(String type) {
+		this.type = type;
+	}
+
 	/**
 	 * Default constructor
 	 */
