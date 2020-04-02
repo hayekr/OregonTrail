@@ -63,12 +63,11 @@ public class Map {
 	}
 
 
-	public String getEnvironment(int index) {
+	public void getEnvironment(int index) {
 		try {
-			return dataFromFile.get(index).get(0);
+			dataFromFile.get(index).get(0);
 		} catch (IndexOutOfBoundsException e) {
 			e.printStackTrace();
-			return "";
 		}
 	}
 }
