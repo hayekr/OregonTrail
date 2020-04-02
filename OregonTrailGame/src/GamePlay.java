@@ -19,7 +19,7 @@ public class GamePlay {
 
 		while (true) {
 			// Print out description of current environment
-			System.out.println(map.getEnvironment(westProgress));
+			System.out.println(map.createEnvironment(westProgress).getDescription());
 
 			if (westProgress > 10) {
 				break;
@@ -46,7 +46,7 @@ public class GamePlay {
 		switch(tp.processText()) {
 			case "goWest": westProgress++; break;
 			case "inventory": System.out.println(wagon.getInventory()); break;
-			case "lookaround": System.out.println(map.getEnvironment(westProgress)); break;
+			case "lookaround": System.out.println(map.createEnvironment(westProgress).getDescription()); break;
 			case "error": break;
 			default: System.out.println("You can't do that");
 		}
