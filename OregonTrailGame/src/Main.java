@@ -74,8 +74,9 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter which item you want to add to your wagon: ");
 		String number = in.nextLine();
-
-		wagon.addItem(item_weight.get(Integer.parseInt(number)));
+		ArrayList<String> itemName = item_weight.get(Integer.parseInt(number));
+		Item newItem = new Item(String.join(",", itemName), 100, 1);
+		wagon.addItem(newItem);
 
 	}
 }
