@@ -70,6 +70,11 @@ public class Main {
 			count++;
 			System.out.println("Item #" + count + ": " + rowInFile);
 		}
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter which item you want to add to your wagon: ");
+		String number = in.nextLine();
+
+		wagon.addItem(item_weight.get(Integer.parseInt(number)));
 
 	}
 }
